@@ -34,7 +34,25 @@ A powerful tool for analyzing JavaScript files/URLs using Google's Gemini AI to 
 2. Install dependencies:
    ```bash
    pip install -r requirements.txt
-3. Add your Gemini API key in .env file:
+   ```
+   If you ge error like: error: externally-managed-environment
+
+   Soulution:
+
+   1.  Install venv (if not install)
+   ```bash
+   sudo apt install python3-venv
+   ```
+   2. Create virtual environment in your project folder
+   ```bash
+   python3 -m venv venv
+   ```
+   3. Activate the venv:
+   ```bash
+   # For Kali or any Linux/macOS
+   source venv/bin/activate 
+   
+3. Add your Gemini API key in .env.example file:
    ```txt
    API_KEY=your_gemini_api_key_here  # Replace your own API KEY
 4. Set up your Google Gemini API Key:
@@ -47,7 +65,14 @@ A powerful tool for analyzing JavaScript files/URLs using Google's Gemini AI to 
 
    Select "Create API Key in new project"
 
-Your API key will appear - copy it immediately (it's only shown once!)
+   Your API key will appear - copy it immediately (it's only shown once!)
+
+5. Past your API in .env.example
+   ```bash
+   # See .env.example
+   ls -la
+   # Rename .env.example to .env
+   mv .env.example .env   
 
 Important Notes:
 1 Rate limit you can visit- https://ai.google.dev/gemini-api/docs/rate-limits 
